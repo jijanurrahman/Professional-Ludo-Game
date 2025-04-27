@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Ludo Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Professional Ludo Game</h1>
+        
+        <div class="game-setup" id="gameSetup">
+            <div class="mode-selection">
+                <button class="btn btn-primary" data-mode="computer">Play vs Computer</button>
+                <button class="btn" data-mode="2player">2 Players</button>
+                <button class="btn" data-mode="3player">3 Players</button>
+                <button class="btn" data-mode="4player">4 Players</button>
+                <button class="btn" data-mode="5player">5 Players</button>
+                <button class="btn" data-mode="6player">6 Players</button>
+            </div>
+            
+            <div class="player-setup" id="playerSetup">
+                <!-- Player inputs will be generated here -->
+            </div>
+            
+            <div class="controls" style="margin-top: 20px;">
+                <button class="btn btn-info" id="startGame">Start Game</button>
+            </div>
+        </div>
+        
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="board-container">
+                <div class="board">
+                    <div class="grid" id="gameBoard">
+                        <!-- Board will be generated here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dice-container" id="diceContainer">
+                <div class="dice" id="dice">
+                    <i class="fas fa-dice-six"></i>
+                </div>
+            </div>
+            
+            <div class="status-bar" id="statusBar">
+                <div id="gameStatus">Choose a game mode to begin</div>
+                <div class="player-turns" id="playerTurns">
+                    <!-- Player turns will be shown here -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-warning" id="newGame">New Game</button>
+                <button class="btn btn-danger" id="resetGame">Reset Game</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="winner-display" id="winnerDisplay">
+        <div class="winner-content">
+            <h2 class="winner-title">Congratulations!</h2>
+            <div class="winner-name" id="winnerName">Player 1</div>
+            <p>has won the game!</p>
+            <button class="btn btn-primary" id="playAgain">Play Again</button>
+        </div>
+    </div>
+    
+    <div class="rules-btn" id="rulesBtn">
+        <i class="fas fa-question"></i>
+    </div>
+    
+    <div class="rules-modal" id="rulesModal">
+        <div class="rules-content">
+            <span class="close-btn" id="closeRules">&times;</span>
+            <h2>Ludo Game Rules</h2>
+            <p>Ludo is a strategy board game for 2-6 players, where the objective is to race your pawns from start to finish according to dice rolls.</p>
+            
+            <h3>Basic Rules:</h3>
+            <ul>
+                <li>Each player has 4 pawns that start in their home yard.</li>
+                <li>To move a pawn out of the home yard, you need to roll a 6.</li>
+                <li>If you roll a 6, you get another turn.</li>
+                <li>Pawns move clockwise around the board according to the dice roll.</li>
+                <li>When a pawn completes a full circuit, it enters the final lane of its color.</li>
+                <li>To win, you must get all 4 pawns to the center of the board.</li>
+            </ul>
+            
+            <h3>Capturing Pawns:</h3>
+            <ul>
+                <li>If your pawn lands on a square occupied by an opponent's pawn, the opponent's pawn is captured and returns to its home yard.</li>
+                <li>You cannot capture a pawn that is on a safe square (colored squares).</li>
+            </ul>
+            
+            <h3>Safe Squares:</h3>
+            <ul>
+                <li>Colored squares are safe zones where pawns cannot be captured.</li>
+                <li>Your home yard and final lane are also safe zones.</li>
+            </ul>
+            
+            <h3>Winning:</h3>
+            <ul>
+                <li>The first player to get all 4 pawns to the center wins the game.</li>
+                <li>Pawns must reach the center with an exact dice roll.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        Made with ❤️ by <a href="https://jijanurrahman.netlify.app/" target="_blank">Jijanur Rahman</a>
+    </footer>
+
+    <!-- Load the game script -->
+    <script src="ludo.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Ludo game initialized');
+        });
+    </script>
+</body>
+</html>
