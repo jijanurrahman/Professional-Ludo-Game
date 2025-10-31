@@ -1,7 +1,7 @@
 # Professional-Ludo-Game
 A modern, mobile-friendly Ludo board game where 2-6 players race their pawns around the board based on dice rolls. Features include AI opponents, dice animations, pawn capture mechanics, and victory celebrations. Customize player names and enjoy this classic strategy game in your browser.
 ---
-## [🎮 Play Online ](https://jijan67.github.io/Professional-Ludo-Game/)
+## [🎮 Play Online ](https://jijanurrahman.github.io/Professional-Ludo-Game/)
 ---
 [![Download](https://img.shields.io/badge/Download-APK-blue.svg?style=flat&logo=android)](https://drive.google.com/file/d/1l5LNIdhhd_3wFf6Taukr7cvqcXs34xNK/view?usp=sharing)
 ---
